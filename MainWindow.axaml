@@ -1,0 +1,72 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="500"
+        x:Class="MiPresentacion.MainWindow"
+        Title="MiPresentacion - Avalonia UI 11"
+        Width="480" Height="500"
+        WindowStartupLocation="CenterScreen">
+
+    <StackPanel Margin="25" Spacing="14">
+
+        <!-- Título principal -->
+        <TextBlock Text="Mi primera aplicación gráfica"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,8" />
+
+        <!-- Campo Nombre -->
+        <StackPanel Spacing="4">
+            <TextBlock Text="Nombre:" FontWeight="SemiBold" />
+            <TextBox x:Name="TxtNombre"
+                     Watermark="Escribe tu nombre" />
+        </StackPanel>
+
+        <!-- Campo Apellido -->
+        <StackPanel Spacing="4">
+            <TextBlock Text="Apellido:" FontWeight="SemiBold" />
+            <TextBox x:Name="TxtApellido"
+                     Watermark="Escribe tu apellido" />
+        </StackPanel>
+
+        <!-- Campo Edad -->
+        <StackPanel Spacing="4">
+            <TextBlock Text="Edad:" FontWeight="SemiBold" />
+            <TextBox x:Name="TxtEdad"
+                     Watermark="Escribe tu edad (número entero positivo)" />
+        </StackPanel>
+
+        <!-- Botones de acción (incluye el reto adicional) -->
+        <StackPanel Orientation="Horizontal"
+                    Spacing="10"
+                    HorizontalAlignment="Center"
+                    Margin="0,8,0,4">
+            <Button x:Name="BtnPresentarme"
+                    Content="Presentarme"
+                    Click="BtnPresentarme_Click" />
+
+            <Button x:Name="BtnCambiarSaludo"
+                    Content="Cambiar saludo"
+                    Click="BtnCambiarSaludo_Click" />
+
+            <Button x:Name="BtnLimpiar"
+                    Content="Limpiar"
+                    Click="BtnLimpiar_Click" />
+        </StackPanel>
+
+        <!-- Área de resultado / validaciones -->
+        <Border BorderBrush="#CCCCCC"
+                BorderThickness="1"
+                CornerRadius="6"
+                Padding="14"
+                Margin="0,6,0,0">
+            <TextBlock x:Name="TxtResultado"
+                       Text="Completa tus datos y presiona 'Presentarme'."
+                       TextWrapping="Wrap"
+                       FontSize="14" />
+        </Border>
+
+    </StackPanel>
+</Window>
